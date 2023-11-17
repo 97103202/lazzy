@@ -1,0 +1,626 @@
+@import url('https://fonts.googleapis.com/css2?family=spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: 'spartan', sans-serif;
+    list-style: none;
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: rgb(222, 107, 12);
+    justify-content: space-between;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+h2 {
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+}
+
+h4 {
+    font-size: 20px;
+    color: #222;
+}
+
+h6 {
+    font-weight: 700;
+    font-size: 12px;
+}
+
+p {
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+    padding: 40px 80px;
+}
+
+.section-m1 {
+    margin: 40px 0;
+}
+
+/* Header */
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background: #e3d1bf;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li {
+    list-style: none;
+    padding: 0 20px;
+}
+
+#navbar li a {
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 100;
+    color: #1a1a1a;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+    color: rgb(222, 107, 12);
+}
+
+/* Homepage */
+#hero {
+    background-image: url(img/background/bellingham.png);
+    height: 90vh;
+    background-position: top 25% right 0;
+    background-color: #e3d1bf;
+    padding: 0 80px;
+    display: flex;
+    background-size: contain;
+    background-repeat: no-repeat;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#neymar {
+    height: 90vh;
+    background-position: top 25% right 0;
+    padding-left: 440px;
+    padding-bottom: 0px;
+    position: absolute;
+}
+
+#hero h4 {
+    padding-bottom: 20px;
+    font-size: 50px;
+    color: rgb(76, 72, 68);
+    font-weight: 600;
+}
+
+.background {
+    background-color: #e3d1bf;
+}
+
+#hero h3 {
+    font-size: 30px;
+    padding-bottom: 30px;
+    color: rgb(76, 59, 26);
+    font-weight: 550;
+}
+
+#hero button {
+    justify-content: center;
+    background-color: transparent;
+    padding: 8px 18px;
+    font-size: 25px;
+    font-weight: 500;
+    color: rgb(222, 107, 12);
+    border: solid rgb(222, 107, 12) 2px;
+    border-radius: 6px;
+
+
+
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.box {
+    width: 300px;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.6);
+    /* Adjusted the shadow */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.slide-img {
+    height: 450px;
+    position: relative;
+
+
+
+}
+
+.slide-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-sizing: border-box;
+
+}
+
+.detail-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    font-family: calibri;
+}
+
+.type {
+    display: flex;
+    flex-direction: column;
+}
+
+.type a {
+    color: #222222;
+    margin: 5px 0px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding-right: 8px;
+}
+
+.type span {
+    color: rgba(26, 26, 26, 0.5);
+}
+
+.price {
+    color: #333333;
+    font-weight: 600;
+    font-size: 1.1rem;
+    font-family: poppins;
+    letter-spacing: 0.5px;
+}
+
+.overlay {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(128, 128, 128, 0.535);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buy-btn {
+    width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    color: #252525;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
+}
+
+.buy-btn:hover {
+    color: #ffffff;
+    background-color: rgb(222, 107, 12);
+    transition: all ease 0.3s;
+}
+
+.overlay {
+    visibility: hidden;
+}
+
+.slide-img:hover .overlay {
+    visibility: visible;
+    animation: fade 0.5s;
+}
+
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.best {
+    color: rgb(0, 0, 0);
+    background-color: #e3d1bf;
+    padding-top: 70px;
+    text-align: center;
+    font-weight: 550;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+/* IK HEB DIT TOEGEVOEGD */
+
+/* CAROUSEL CONTAINER: Dit is het hoofdcontainer-element voor de carrousel. */
+.carousel-container {
+    position: relative;
+    /* Relative positioning maakt het mogelijk om interne elementen absoluut te positioneren. */
+    overflow: hidden;
+    /* Voorkomt dat interne elementen buiten dit container uitsteken. */
+    display: flex;
+    /* Maakt het mogelijk om kinderelementen naast elkaar te plaatsen. */
+    align-items: center;
+    /* Centreert kinderelementen verticaal. */
+    padding: 0 20px;
+    /* Voegt een horizontale marge toe aan de zijkanten van de container. */
+    padding-top: 10px;
+    background-color: #e3d1bf;
+}
+
+/* PRO: Dit is de container voor alle productitems in de carrousel. */
+.pro {
+    margin-top: 35px;
+    /* Ruimte boven de productcontainer. */
+    display: flex;
+    /* Plaatst productitems naast elkaar. */
+    transition: transform 0.3s;
+    /* Zorgt voor een vloeiende animatie bij het verschuiven van producten. */
+    justify-content: space-between;
+    /* Verdeelt de productitems gelijkmatig over de breedte van de container. */
+    margin-left: 1.5%;
+    /* Ruimte aan de linkerkant van de productcontainer. */
+    margin-right: 10%;
+    /* Ruimte aan de rechterkant van de productcontainer. */
+    margin-bottom: 35px;
+    /* Ruimte onder de productcontainer. */
+
+}
+
+/* ITEM-SLIDE: Individrgba(205, 46, 46, 0.7)en de carrousel. */
+.item-slide {
+    animation: zoomFadeIn 0.7s forwards;
+    /* Toepassen van een inzoom- en fade-in animatie op elk productitem. */
+    min-width: 20%;
+    /* Minimale breedte van elk productitem. */
+    list-style: none;
+    /* Verwijdert de standaardlijststijl. */
+    margin: 0 20px;
+    /* Voegt horizontale marges toe rond elk productitem. */
+}
+
+/* CAROUSEL-BTN: De knoppen gebruikt om door de carrousel te navigeren. */
+.carousel-btn {
+    position: absolute;
+    /* Absoluut positioneren binnen de relatief gepositioneerde ouder. */
+    top: 50%;
+    /* Plaatst de knop in het midden van de hoogte van zijn ouder. */
+    transform: translateY(-50%);
+    /* Past een verticale verschuiving toe om de knop precies in het midden te centreren. */
+    z-index: 2;
+    /* Plaatst de knop boven andere elementen. */
+    background-color: none;
+    /* Geeft de knop een semi-doorschijnende achtergrond. */
+    border: none;
+    /* Verwijdert de standaard rand rond de knop. */
+    font-size: 1.5em;
+    /* Vergroot het pictogram of de tekst binnen de knop. */
+    padding: 10px 15px;
+    /* Ruimte rond het binnenste inhoud van de knop. */
+    cursor: pointer;
+    /* Verandert de muisaanwijzer in een hand wanneer deze over de knop zweeft. */
+    outline: none;
+    /* Verwijdert de focusomtrek rond de knop. */
+}
+
+.prev-btn {
+    left: 0;
+    /* Plaatst de "vorige" knop aan de linkerkant van zijn ouder. */
+}
+
+.next-btn {
+    right: 0;
+    /* Plaatst de "volgende" knop aan de rechterkant van zijn ouder. */
+}
+
+/* CS-HIDDEN: Een hulphandvat om elementen te verbergen. */
+.cs-hidden {
+    display: none;
+    /* Verbergt het element volledig. */
+}
+
+/* ZOOMFADEIN: Een animatiesleutelkader dat een inzoom- en fade-in-effect produceert. */
+@keyframes zoomFadeIn {
+    0% {
+        transform: scale(0.9);
+        /* Start met een iets gereduceerde schaal. */
+        opacity: 0;
+        /* Start volledig transparant. */
+    }
+
+    50% {
+        transform: scale(1.05);
+        /* Vergroot het item iets meer dan zijn oorspronkelijke grootte. */
+    }
+
+    100% {
+        transform: scale(1);
+        /* Eindigt op zijn oorspronkelijke grootte. */
+        opacity: 1;
+        /* Eindigt volledig zichtbaar. */
+    }
+}
+
+.psg-box {
+    background-image: url("img/background/psg2.png");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 650px;
+    height: 450px;
+    align-items: flex-start;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    margin-left: 4%;
+    box-shadow: #222;
+    box-sizing: 88px;
+    border-radius: 5px;
+}
+
+.button {
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+    font-weight: 600;
+    padding: 11px 18px;
+    color: #ffffff;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid white;
+    outline: none;
+    transition: 0.2s;
+    margin: auto;
+}
+
+.button:hover {
+    color: #ffffff;
+    color: rgb(222, 107, 12);
+    border-color: rgb(222, 107, 12);
+    transition: all ease 0.3s;
+}
+
+
+.realmadrid-box {
+    background-image: url("img/background/realmadrid1.png");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 650px;
+    height: 450px;
+    align-items: flex-start;
+    min-width: 580;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+    margin-left: 50%;
+    margin-top: 100px;
+    box-shadow: #222;
+    box-sizing: 88px;
+
+    border-radius: 5px;
+
+}
+
+.dortmund-box {
+    background-image: url("img/background/dortmund5.png");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 650px;
+    height: 450px;
+    align-items: flex-start;
+    min-width: 580;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+    margin-left: 70px;
+    margin-top: 100px;
+    box-shadow: #222;
+    box-sizing: 88px;
+
+    border-radius: 5px;
+}
+
+.manshester-box {
+    background-image: url("img/background/manshester.png");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 650px;
+    height: 450px;
+    align-items: flex-start;
+    min-width: 580;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+    margin-left: 720px;
+    margin-top: 150px;
+    box-shadow: #222;
+    box-sizing: 88px;
+    margin-bottom: 150px;
+
+    border-radius: 5px;
+
+}
+
+.footer {
+    border-top: 1px solid rgba(128, 128, 128, 0.107);
+    border-width: 2px;
+
+
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    border-collapse: inherit;
+    border-right-width: 20px;
+
+
+
+
+}
+
+
+
+.footer h1 {
+    font-size: 90px;
+    font-weight: 10;
+
+}
+
+.list {
+    list-style: none;
+    font-size: 20px;
+    font-weight: 100;
+    text-align: center;
+    color: #1a1a1a;
+    margin-top: 40px;
+
+}
+
+.list li {
+    margin-top: 20px
+}
+
+.list li a {
+    color: gray;
+    text-decoration: none;
+}
+
+.list li a:hover,
+.list li a.active {
+    color: rgb(222, 107, 12);
+}
+
+.h1 {
+    color: rgba(128, 128, 128, 0.722);
+}
+
+#psg {
+    top: 190px;
+    position: relative;
+    margin-left: 60px;
+    color: #222;
+    font-weight: 300;
+    font-size: 35px;
+    margin-top: -80px;
+
+
+}
+
+
+#psg-text {
+
+    position: relative;
+    left: 750px;
+    top: 300px;
+    font-size: 60px;
+
+}
+
+.text {
+    font-size: 20px;
+    color: #222;
+}
+
+#realmadrid {
+    top: 315px;
+    position: relative;
+    left: 1207px;
+    color: #222;
+    font-weight: 300;
+    font-size: 35px;
+    margin-top: -80px;
+}
+
+#real-text {
+    position: relative;
+    left: 40px;
+    top: 400px;
+    font-size: 60px;
+    width: 50%;
+}
+
+
+#dortmund {
+    top: 295px;
+    position: relative;
+    left: 75px;
+    color: #222;
+    font-weight: 300;
+    font-size: 35px;
+    margin-top: -80px;
+}
+
+#dortmund-text {
+    position: relative;
+    left: 760px;
+    top: 410px;
+    font-size: 60px;
+}
+
+#manchester {
+    top: 275px;
+    position: relative;
+    left: 1150px;
+    color: #222;
+    font-weight: 300;
+    font-size: 35px;
+    margin-top: -80px;
+}
+
+#manchester-text {
+    position: relative;
+    left: 40px;
+    top: 420px;
+    font-size: 60px;
+    width: 50%;
+}
